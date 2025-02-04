@@ -5,6 +5,7 @@
  * Double - floating-point numbers - 8 bytes
  * Float - floating-point numbers - 4 bytes
  * String - sequence of characters
+ * Boolean - true or false
  */
 
 val one: Int = 1
@@ -17,3 +18,4 @@ val aShort: Short = 32767
 val aDouble: Double = 1.321
 val aFloat: Float = 31.1f
 val aString: String = "Simple string"
+val aBoolean: Boolean = true
