@@ -1,7 +1,8 @@
 // 1.
-val percentage: Int = -1
+val percentage: Int = 101
+
 if (percentage < 0) {
-  "How is that even possible. G"
+  "How is that even possible. G (new grade)"
 } else if (percentage < 50) {
   "F"
 } else if (percentage < 60) {
@@ -12,14 +13,17 @@ if (percentage < 0) {
   "C"
 } else if (percentage < 90) {
   "B"
-} else {
+} else if (percentage < 101) {
   "A"
+} else {
+  "Lay the books down, bro"
 }
 
 // 2.
-val age: Int = 14
-
-if (age < 4) {
+val age: Int = 0
+if (age < 0) {
+  "You're not even here with us, buddy"
+} else if (age < 4) {
   "Take a nap, bud"
 } else if (age < 8) {
   "U"
