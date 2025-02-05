@@ -9,13 +9,13 @@
 ### Tuesday
 
 - Tasks:
-  - [x] MVP
-  - [x] Extension
-  - [x] Research
+    - [x] MVP
+    - [x] Extension
+    - [x] Research
 
 ### Wednesday
 
 - Tasks:
-  - [x] MVP
-  - [x] Extension
-  - [x] Research
+    - [x] MVP
+    - [x] Extension
+    - [x] Research
