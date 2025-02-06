@@ -12,26 +12,20 @@ val firstMap: Map[String, Int] = Map(
 
 // Accessing data
 
-// Seq
 val getFirstSeqElement1: Int = firstSeq(0)
 val getFirstSeqHead: Int = firstSeq.head
-val getFirstSeqTail: Seq[Int] = firstSeq.tail
+val getFirstSeqLast: Int = firstSeq.last
 val getFirstSeqElement2: Int = firstSeq(1)
 //val getFirstSeqOutOfBoundsElement: Int = firstSeq(firstSeq.length)
 
-// List
 val getFirstListElement1: Int = firstList(0)
-val getFirstListTail: List[Int] = firstList.tail
 val getFirstListLastElement: Int = firstList.last
 
-// Map
 val getFirstMapData = firstMap("three")
 
 // Manipulating data - using map
 
-val tripledList: List[Int] = firstList.map {
-  number => number * 3
-}
+val tripledList: List[Int] = firstList.map { number => number * 3 }
 
 // bad practice to not name your data type
 val tripledSeq: Seq[Int] = firstSeq.map {
@@ -83,5 +77,20 @@ val containsList: Boolean = firstList.contains(3)
 
 val containsMap: Boolean = firstMap.contains("two")
 val containsMap: Boolean = firstMap.contains("six")
-
 val containsOrSeq: Boolean = firstSeq.contains(7) || firstSeq.contains(3)
+
+// Making additions - prepend (add to start) or append (add to end)
+
+val appendFirstSeq: Seq[Int] = firstSeq :+ 6
+val prependFirstSeq: Seq[Int] = 6 +: firstSeq
+val concatenatedSeq: Seq[Int] = firstSeq ++ Seq(6, 7, 8)
+
+val appendFirstMap = firstMap + ("six" -> 6)
+
+// Removal
+
+val removeHeadFirstSeq = firstSeq.tail
+val removeLastFirstSeq = firstSeq.init
+
+val removeValueFirstMap = firstMap - "three"
+val removeMultipleValuesFirstMap = firstMap - ("one", "five")
