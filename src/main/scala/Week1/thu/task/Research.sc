@@ -1,4 +1,3 @@
-import scala.collection.SortedSet
 
 // 1. Set(1, 2) == Set(2, 1, 1, 1) returns true, since Set is a collection of
 // unordered elements
@@ -20,4 +19,8 @@ List(5, 6) == Set(5, 6)
 List(5, 6) == Set(5, 6).toList
 List(5, 6).toSet == Set(5, 6)
 
+// Beware. Although when comparing Sets, the order of the elements is not important,
+// as soon as a Set is converted to an ordered collection, the internal order of the
+// elements matter.
+List(5, 6) == Set(6, 5).toList // False
 
