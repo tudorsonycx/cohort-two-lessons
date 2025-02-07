@@ -19,3 +19,10 @@
     - [x] MVP
     - [x] Extension
     - [x] Research
+
+### Thursday
+
+- Task:
+    - [x] MVP
+    - [x] Extension
+    - [x] Research
