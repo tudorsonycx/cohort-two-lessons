@@ -29,7 +29,7 @@ sumOfOddNumbers(numbers)
 
 // Alternative:
 
-def sumOfOddNumbersAlt(number: List[Int]): Int =
+def sumOfOddNumbersAlt(numbers: List[Int]): Int =
   numbers.map(num => getSquare(num)).filter(num => isOdd(num)).sum
 
 sumOfOddNumbersAlt(numbers) == sumOfOddNumbers(numbers)
