@@ -22,7 +22,13 @@
 
 ### Thursday
 
-- Task:
+- Tasks:
     - [x] MVP
     - [x] Extension
     - [x] Research
+
+### Friday
+
+- Tasks:
+    - [x] MVP
+    - [x] Extension
