@@ -25,14 +25,18 @@ object Conversation extends App {
       println("Nothing to talk about, huh?")
   }
 
-  greetUser()
-
-  while (true) {
-    makeConversation()
-    val continue: String = readLine("Do you want to continue (yes/no): ").toLowerCase
-    if (continue != "yes") {
-      println("Goodbye!")
-      System.exit(0)
+  private def makeMuchConversation(): Unit = {
+    while (true) {
+      makeConversation()
+      val continue: String = readLine("Do you want to continue (yes/no): ").toLowerCase
+      if (continue != "yes") {
+        println("Goodbye!")
+        System.exit(0)
+      }
     }
   }
+
+  greetUser()
+
+  makeMuchConversation()
 }
