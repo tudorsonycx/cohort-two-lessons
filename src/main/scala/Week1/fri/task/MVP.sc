@@ -19,9 +19,10 @@ val numbers: List[Int] = List(2, -3, 13, -19, 10, 20, -2, -20, -18, 13)
 def sumOfOddNumbers(numbers: List[Int]): Int = {
   val oddSquaredNumbers: List[Int] =
     for {
-      squaredNumber <- numbers.map(num => getSquare(num))
-      if isOdd(squaredNumber)
-    } yield squaredNumber
+      num <- numbers
+      square = getSquare(num)
+      if isOdd(square)
+    } yield square
   oddSquaredNumbers.sum
 }
 
