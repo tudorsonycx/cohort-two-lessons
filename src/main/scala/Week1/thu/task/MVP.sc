@@ -3,6 +3,8 @@ val oneToFiveList: List[Int] = List(1, 2, 3, 4, 5)
 
 val primaryColorsSeq: Seq[String] = Seq("red", "yellow", "blue")
 
+val oneToFiveTripledList: List[Int] = oneToFiveList.map(num => num * 3)
+
 val noBlueSeq: Seq[String] = primaryColorsSeq.filter(color => color.toLowerCase != "blue")
 
 val hasOrange: Boolean = primaryColorsSeq.contains("Orange")
