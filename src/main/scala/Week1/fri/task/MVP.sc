@@ -17,10 +17,11 @@ val numbers: List[Int] = List(2, -3, 13, -19, 10, 20, -2, -20, -18, 13)
 
 
 def sumOfOddNumbers(numbers: List[Int]): Int = {
-  val oddSquaredNumbers: List[Int] = for {
-    squaredNumber <- numbers.map(num => getSquare(num))
-    if isOdd(squaredNumber)
-  } yield squaredNumber
+  val oddSquaredNumbers: List[Int] =
+    for {
+      squaredNumber <- numbers.map(num => getSquare(num))
+      if isOdd(squaredNumber)
+    } yield squaredNumber
   oddSquaredNumbers.sum
 }
 
@@ -36,24 +37,20 @@ sumOfOddNumbersAlt(numbers) == sumOfOddNumbers(numbers)
 // 4.
 
 def getAverageScore(scores: Map[String, Int]): Int = {
-  val validScores = scores.values.map(num => {
-    if (num < 0) 0 else if (num > 100) 100 else num
-  })
+  val validScores = scores.values.map(num =>
+    if (num < 0) 0
+    else if (num > 100) 100
+    else num
+  )
   validScores.sum / validScores.size
 }
 
 def getGrade(totalScore: Int): String =
-  if (totalScore < 60) {
-    "E"
-  } else if (totalScore < 70) {
-    "D"
-  } else if (totalScore < 80) {
-    "C"
-  } else if (totalScore < 90) {
-    "B"
-  } else {
-    "A"
-  }
+  if (totalScore < 60) "E"
+  else if (totalScore < 70) "D"
+  else if (totalScore < 80) "C"
+  else if (totalScore < 90) "B"
+  else "A"
 
 val scores: Map[String, Int] = Map(
   "Maths" -> 90,
