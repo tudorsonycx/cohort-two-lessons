@@ -2,7 +2,7 @@ package week1.fri.task
 
 import scala.io.StdIn.readLine
 
-object Extension extends App {
+object Conversation extends App {
 
   private def greetUser(): Unit = {
     val name: String = readLine("Enter your name: ")
