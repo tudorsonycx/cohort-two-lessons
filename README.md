@@ -33,3 +33,12 @@
     - [x] MVP
     - [x] Extension
     - [x] Readme
+
+## Week 2
+
+### Monday
+
+- Tasks:
+    - [x] MVP
+    - [x] Extension
+    - [x] Research
