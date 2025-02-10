@@ -7,4 +7,6 @@ object ObjectsTasks extends App {
       "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
     )
   }
+
+  println(Week.days(3))
 }
