@@ -1,12 +1,9 @@
 package week2.day1.task.mvp
 
 object AnimalSanctuary extends App {
-  private val bear1 = Bear("Bruno", 10f, "brown", isPregnant = false)
+  private val bear1 = Bear("Bruno", 10 * 365, "brown", isPregnant = false)
 
-  println(bear1.name)
-  println(bear1.age)
-  println(bear1.furColor)
-  println(bear1.isPregnant)
+  bear1.describe()
   bear1.eat()
   bear1.sleep()
   bear1.poop()
@@ -16,9 +13,9 @@ object AnimalSanctuary extends App {
   bear1.hibernate()
   println()
 
-  private val parrot1 = Parrot("Polly", 3f, "red", 25)
+  private val parrot1 = Parrot("Polly", 12 * 365, "red", 25)
 
-  println(parrot1.name)
+  parrot1.describe()
   parrot1.fly()
   parrot1.layEggs()
   parrot1.talk()
@@ -26,10 +23,9 @@ object AnimalSanctuary extends App {
   parrot1.sleep()
   println()
 
-  private val butterfly1 = Butterfly("Butter",0.1f, 4, 6)
+  private val butterfly1 = Butterfly("Butter", 5, 4, 6)
 
-  println(butterfly1.name)
-  println(s"${butterfly1.numberOfLegs} legs")
+  butterfly1.describe()
   butterfly1.metamorphose()
   butterfly1.poop()
   butterfly1.fly()

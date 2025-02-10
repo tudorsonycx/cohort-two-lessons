@@ -2,8 +2,12 @@ package week2.day1.task.mvp
 
 trait Animal extends Species {
   val name: String
-  // age in years
-  val age: Float
+  // age in days
+  val age: Int
+
+  def printName(): Unit = println(s"Name: $name")
+
+  def printAge(): Unit = println(f"Age: ${age / 365f}%.2f years")
 
   def eat(): Unit = println(s"$name is eating")
 
@@ -12,4 +16,6 @@ trait Animal extends Species {
   def poop(): Unit = println(s"$name is pooping")
 
   def move(): Unit = println(s"$name is moving")
+
+  def describe(): Unit
 }
