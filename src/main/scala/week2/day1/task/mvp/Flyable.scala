@@ -18,7 +18,7 @@ trait Bird extends Animal with Flyable {
 
   def layEggs(): Unit = println(s"$name is laying eggs")
 
-  override def describe(): Unit = {
+  def describe(): Unit = {
     describeSpecies()
     printName()
     printAge()
