@@ -1,6 +1,6 @@
 package week2.day1.task.mvp
 
-class Parrot(val name: String, val age: Int, val feathersColor: String, val wingSpan: Int)
+class Parrot(val name: String, val age: Int, val dietType: DietType, val feathersColor: String, val wingSpan: Int)
   extends Bird with Flyable {
   val species: String = "Psittacius erithacus"
   val conservationStatus: String = "Least Concern"
@@ -11,6 +11,6 @@ class Parrot(val name: String, val age: Int, val feathersColor: String, val wing
 }
 
 object Parrot {
-  def apply(name: String, age: Int, feathersColor: String, wingSpan: Int) =
-    new Parrot(name, age, feathersColor, wingSpan)
+  def apply(name: String, age: Int, dietType: DietType, feathersColor: String, wingSpan: Int) =
+    new Parrot(name, age, dietType, feathersColor, wingSpan)
 }
