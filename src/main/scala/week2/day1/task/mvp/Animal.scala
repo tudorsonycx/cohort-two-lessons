@@ -1,6 +1,6 @@
 package week2.day1.task.mvp
 
-trait Animal {
+trait Animal extends Species {
   val name: String
   // age in years
   val age: Float
