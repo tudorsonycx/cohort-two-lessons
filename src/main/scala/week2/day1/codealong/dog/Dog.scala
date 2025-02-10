@@ -1,4 +1,4 @@
-package week2.day1.codealong
+package week2.day1.codealong.dog
 
 class Dog(val name: String, val age: Int, val breed: String, val isBig: Boolean) {
 

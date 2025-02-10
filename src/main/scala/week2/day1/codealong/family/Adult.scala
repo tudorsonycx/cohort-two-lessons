@@ -1,4 +1,4 @@
-package week2.day1.codealong
+package week2.day1.codealong.family
 
 class FirstName(val firstName: String)
 

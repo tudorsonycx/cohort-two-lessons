@@ -1,6 +1,4 @@
-package week2.day1.codealong
-
-import scala.annotation.tailrec
+package week2.day1.codealong.family
 
 class Child(val firstName: String) {
 

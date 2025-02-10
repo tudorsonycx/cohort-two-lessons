@@ -1,4 +1,4 @@
-package week2.day1.codealong
+package week2.day1.codealong.dog
 
 object DogLogic extends App {
 
