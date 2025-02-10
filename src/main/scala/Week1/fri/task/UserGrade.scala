@@ -6,7 +6,7 @@ object UserGrade extends App {
 
   private val subjects: List[String] = List("Math", "Science", "English")
 
-  private def getScoresMap(): Map[String, Int] = {
+  private def getScoresMap(subjects: List[String]): Map[String, Int] = {
     subjects.map(subject => {
       val score: Int = readLine(s"Enter score for $subject: ").toInt match {
         case s if s < 0 => 0
@@ -30,7 +30,7 @@ object UserGrade extends App {
     else "A"
   }
 
-  private val scores: Map[String, Int] = getScoresMap()
+  private val scores: Map[String, Int] = getScoresMap(subjects)
   println(s"Your scores: $scores")
 
   private val averageScore: Int = getAverageScore(scores)
