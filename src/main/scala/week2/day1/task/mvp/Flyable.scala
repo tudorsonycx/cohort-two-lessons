@@ -22,6 +22,7 @@ trait Bird extends Animal with Flyable {
     describeSpecies()
     printName()
     printAge()
+    printDietType()
     printFeathersColor()
     printWingSpan()
   }
@@ -40,6 +41,7 @@ trait Insect extends Animal with Flyable {
     describeSpecies()
     printName()
     printAge()
+    printDietType()
     printNumberOfLegs()
     printWingSpan()
   }

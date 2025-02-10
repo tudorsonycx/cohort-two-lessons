@@ -16,6 +16,7 @@ trait Mammal extends Animal {
     describeSpecies()
     printName()
     printAge()
+    printDietType()
     printFurColor()
     printIsPregrant()
   }
