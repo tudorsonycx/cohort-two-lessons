@@ -7,34 +7,40 @@ object AnimalSanctuary extends App {
     Mantis("Manty", 100, Carnivore, 6, 10)
   )
 
-  def feedAnimal(animal: Animal): Unit = animal.eat()
-
-  def describeAllAnimals(animals: List[Animal]): Unit = animals.foreach(animal =>{
-    animal.describe()
+  private def feedAnimal(animal: Animal): Unit = {
+    println(s"Feeding ${animal.name}...")
     animal.eat()
+  }
+
+  private def feedAllAnimals(animals: List[Animal]): Unit = {
+    println("Feeding all animals...")
+    animals.foreach(feedAnimal)
+  }
+
+  private def describeAllAnimals(animals: List[Animal]): Unit = animals.foreach(animal => {
+    animal.describe()
     animal.sleep()
     animal.poop()
     animal.move()
     animal match {
-      case bear: Bear => {
+      case bear: Bear =>
         bear.giveBirth()
         bear.hibernate()
         bear.hunt()
-      }
-      case parrot: Parrot => {
+      case parrot: Parrot =>
         parrot.fly()
         parrot.layEggs()
         parrot.talk()
-      }
-      case mantis: Mantis => {
+      case mantis: Mantis =>
         mantis.fly()
         mantis.layEggs()
         mantis.molt()
-      }
       case _ => println("Unknown animal")
     }
     println()
   })
 
   describeAllAnimals(animals)
+
+  feedAllAnimals(animals)
 }
