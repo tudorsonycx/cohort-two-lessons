@@ -13,6 +13,6 @@ class Bear(val name: String, val age: Int, val dietType: DietType, val furColor:
 }
 
 object Bear {
-  def apply(name: String, age: Int, dietType: DietType, furColor: String, isPregnant: Boolean) =
+  def apply(name: String, age: Int, dietType: DietType, furColor: String, isPregnant: Boolean): Mammal =
     new Bear(name, age, dietType, furColor, isPregnant)
 }

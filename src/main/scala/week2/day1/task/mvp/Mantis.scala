@@ -11,6 +11,6 @@ class Mantis(val name: String, val age: Int, val dietType: DietType, val numberO
 }
 
 object Mantis {
-  def apply(name: String, age: Int, dietType: DietType, numberOfLegs: Int, wingSpan: Int) =
+  def apply(name: String, age: Int, dietType: DietType, numberOfLegs: Int, wingSpan: Int): Mantis =
     new Mantis(name, age, dietType, numberOfLegs, wingSpan)
 }

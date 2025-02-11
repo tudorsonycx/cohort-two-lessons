@@ -11,6 +11,6 @@ class Parrot(val name: String, val age: Int, val dietType: DietType, val feather
 }
 
 object Parrot {
-  def apply(name: String, age: Int, dietType: DietType, feathersColor: String, wingSpan: Int) =
+  def apply(name: String, age: Int, dietType: DietType, feathersColor: String, wingSpan: Int): Parrot =
     new Parrot(name, age, dietType, feathersColor, wingSpan)
 }
