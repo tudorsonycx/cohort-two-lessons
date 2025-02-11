@@ -4,7 +4,7 @@ trait Flyable {
   // wing span in cm
   val wingSpan: Int
 
-  def printWingSpan(): Unit = println(s"Wing span: $wingSpan cm")
+  protected def printWingSpan(): Unit = println(s"Wing span: $wingSpan cm")
 
   def fly(): Unit
 }
@@ -12,7 +12,7 @@ trait Flyable {
 trait Bird extends Animal with Flyable {
   val feathersColor: String
 
-  def printFeathersColor(): Unit = println(s"Feathers color: $feathersColor")
+  protected def printFeathersColor(): Unit = println(s"Feathers color: $feathersColor")
 
   def fly(): Unit = println(s"$name is flying")
 
@@ -31,7 +31,7 @@ trait Bird extends Animal with Flyable {
 trait Insect extends Animal with Flyable {
   val numberOfLegs: Int
 
-  def printNumberOfLegs(): Unit = println(s"Number of legs: $numberOfLegs")
+  protected def printNumberOfLegs(): Unit = println(s"Number of legs: $numberOfLegs")
 
   def fly(): Unit = println(s"$name is flying")
 

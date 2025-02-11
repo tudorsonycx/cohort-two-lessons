@@ -4,9 +4,9 @@ trait Mammal extends Animal {
   val furColor: String
   val isPregnant: Boolean
 
-  def printFurColor(): Unit = println(s"Fur color: $furColor")
+  protected def printFurColor(): Unit = println(s"Fur color: $furColor")
 
-  def printIsPregrant(): Unit = println(s"Pregnant: $isPregnant")
+  protected def printIsPregnant(): Unit = println(s"Pregnant: $isPregnant")
 
   def giveBirth(): Unit =
     if (isPregnant) println(s"$name is giving birth")
@@ -18,6 +18,6 @@ trait Mammal extends Animal {
     printAge()
     printDietType()
     printFurColor()
-    printIsPregrant()
+    printIsPregnant()
   }
 }
