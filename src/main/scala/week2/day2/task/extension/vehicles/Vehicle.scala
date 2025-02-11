@@ -5,7 +5,9 @@ trait Vehicle {
   val model: String
   val year: Int
   val color: String
-  val description: String = s"This vehicle is a $make $model from $year and it is $color"
+  val fuelType: String
+
+  def describe: String = s"This vehicle is a $make $model from $year with $color color running on $fuelType"
 
   def startEngine: String = s"The $make $model is starting"
 
