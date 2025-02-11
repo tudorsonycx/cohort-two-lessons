@@ -32,7 +32,7 @@
 - Tasks:
     - [x] MVP
     - [x] Extension
-    - [x] Readme
+    - [x] Research
 
 ## Week 2
 
