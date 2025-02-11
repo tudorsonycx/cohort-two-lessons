@@ -72,4 +72,23 @@ object VehicleLogic extends App {
   println(raceCar3.equals(raceCar6))
   println(raceCar4.equals(raceCar4Copy))
 
+  // the difference between == and equals is that equals can be overridden to allow custom
+  // comparison logic, while == is a final method that calls equals and treats nulls properly
+  // example:
+  println(raceCar4 == raceCar4Copy)
+  println(raceCar4.equals(raceCar4Copy))
+
+  // the getClass method returns the runtime class of the object
+  println(fighterJet1.getClass)
+  println(car1.getClass)
+  println(warship1.getClass)
+
+  // the hashCode method returns a hash code value for the object
+  println(car1.hashCode())
+  println(fighterJet1.hashCode())
+  println(warship1.hashCode())
+
+  // the eq method returns true if the object is the same as the object passed as an argument
+  println(raceCar4 == raceCar4Copy)
+  println(raceCar4.eq(raceCar4Copy))
 }
