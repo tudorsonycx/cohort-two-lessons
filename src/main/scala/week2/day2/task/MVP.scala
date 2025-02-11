@@ -11,7 +11,7 @@ package week2.day2.task
 // as keys in maps
 // - a toString method is generated, helpful for debugging
 
-object mvp extends App {
+object MVP extends App {
   // 2.
 
   // a. Compiles
