@@ -4,45 +4,45 @@ trait Flyable {
   // wing span in cm
   val wingSpan: Int
 
-  protected def printWingSpan(): Unit = println(s"Wing span: $wingSpan cm")
+  protected def printWingSpan: String = s"Wing span: $wingSpan cm"
 
-  def fly(): Unit
+  def fly: String
 }
 
 trait Bird extends Animal with Flyable {
   val feathersColor: String
 
-  protected def printFeathersColor(): Unit = println(s"Feathers color: $feathersColor")
+  protected def printFeathersColor: String = s"Feathers color: $feathersColor"
 
-  def fly(): Unit = println(s"$name is flying")
+  def fly: String = s"$name is flying"
 
-  def layEggs(): Unit = println(s"$name is laying eggs")
+  def layEggs: String = s"$name is laying eggs"
 
-  def describe(): Unit = {
-    describeSpecies()
-    printName()
-    printAge()
-    printDietType()
-    printFeathersColor()
-    printWingSpan()
+  def describe: String = {
+    s"$describeSpecies\n" +
+      s"$printName\n" +
+      s"$printAge\n" +
+      s"$printDietType\n" +
+      s"$printFeathersColor\n" +
+      s"$printWingSpan"
   }
 }
 
 trait Insect extends Animal with Flyable {
   val numberOfLegs: Int
 
-  protected def printNumberOfLegs(): Unit = println(s"Number of legs: $numberOfLegs")
+  protected def printNumberOfLegs: String = s"Number of legs: $numberOfLegs"
 
-  def fly(): Unit = println(s"$name is flying")
+  def fly: String = s"$name is flying"
 
-  def layEggs(): Unit = println(s"$name is laying eggs")
+  def layEggs: String = s"$name is laying eggs"
 
-  def describe(): Unit = {
-    describeSpecies()
-    printName()
-    printAge()
-    printDietType()
-    printNumberOfLegs()
-    printWingSpan()
+  def describe: String = {
+    s"$describeSpecies\n" +
+      s"$printName\n" +
+      s"$printAge\n" +
+      s"$printDietType\n" +
+      s"$printNumberOfLegs\n" +
+      s"$printWingSpan"
   }
 }

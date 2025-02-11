@@ -7,9 +7,9 @@ class Bear(val name: String, val age: Int, val dietType: DietType, val furColor:
   val avgLifespanRange: (Int, Int) = (365 * 20, 365 * 30)
   val habitat = "Forests, mountains, and grasslands"
 
-  def hibernate(): Unit = println(s"$name is hibernating")
+  def hibernate: String = s"$name is hibernating"
 
-  def hunt(): Unit = println(s"$name is hunting")
+  def hunt: String = s"$name is hunting"
 }
 
 object Bear {

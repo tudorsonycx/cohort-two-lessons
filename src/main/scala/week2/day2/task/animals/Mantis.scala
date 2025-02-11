@@ -7,7 +7,7 @@ class Mantis(val name: String, val age: Int, val dietType: DietType, val numberO
   val avgLifespanRange: (Int, Int) = (365 / 2, 365)
   val habitat: String = "Grasslands, forests, meadows, gardens, shrubs, and fields"
 
-  def molt(): Unit = println(s"$name is molting")
+  def molt: String = s"$name is molting"
 }
 
 object Mantis {

@@ -7,7 +7,7 @@ class Parrot(val name: String, val age: Int, val dietType: DietType, val feather
   val avgLifespanRange: (Int, Int) = (40 * 365, 60 * 365)
   val habitat: String = "Tropical and subtropical regions"
 
-  def talk(): Unit = println(s"$name is talking")
+  def talk: String = s"$name is talking"
 }
 
 object Parrot {

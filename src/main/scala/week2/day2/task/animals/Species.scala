@@ -7,10 +7,10 @@ trait Species {
   val avgLifespanRange: (Int, Int)
   val habitat: String
 
-  def describeSpecies(): Unit = {
-    println(s"Species: $species")
-    println(s"Conservation status: $conservationStatus")
-    println(f"Average lifespan: ${avgLifespanRange._1 / 365f}%.2f - ${avgLifespanRange._2 / 365f}%.2f years")
-    println(s"Habitat: $habitat")
+  def describeSpecies: String = {
+    s"Species: $species\n" +
+      s"Conservation status: $conservationStatus\n" +
+      f"Average lifespan: ${avgLifespanRange._1 / 365f}%.2f - ${avgLifespanRange._2 / 365f}%.2f years\n" +
+      s"Habitat: $habitat"
   }
 }

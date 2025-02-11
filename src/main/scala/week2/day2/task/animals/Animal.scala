@@ -7,19 +7,19 @@ trait Animal extends Species {
 
   val dietType: DietType
 
-  protected def printName(): Unit = println(s"Name: $name")
+  protected def printName: String = s"Name: $name"
 
-  protected def printAge(): Unit = println(f"Age: ${age / 365f}%.2f years")
+  protected def printAge: String = f"Age: ${age / 365f}%.2f years"
 
-  protected def printDietType(): Unit = println(s"Diet type: $dietType")
+  protected def printDietType: String = s"Diet type: $dietType"
 
-  def eat(): Unit = println(s"$name is eating")
+  def eat: String = s"$name is eating"
 
-  def sleep(): Unit = println(s"$name is sleeping")
+  def sleep: String = s"$name is sleeping"
 
-  def poop(): Unit = println(s"$name is pooping")
+  def poop: String = s"$name is pooping"
 
-  def move(): Unit = println(s"$name is moving")
+  def move: String = s"$name is moving"
 
-  def describe(): Unit
+  def describe: String
 }
