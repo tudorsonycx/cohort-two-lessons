@@ -5,7 +5,7 @@ trait Vehicle {
   val model: String
   val year: Int
   val color: String
-  val fuelType: String
+  val fuelType: FuelType
 
   def describe: String = s"This vehicle is a $make $model from $year with $color color running on $fuelType"
 
