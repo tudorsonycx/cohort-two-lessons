@@ -9,7 +9,7 @@ object AnimalSanctuary extends App {
 
   private def feedAnimal(animal: Animal): Unit = {
     println(s"Feeding ${animal.name}...")
-    animal.eat()
+    println(animal.eat)
   }
 
   private def feedAllAnimals(animals: List[Animal]): Unit = {
@@ -18,23 +18,23 @@ object AnimalSanctuary extends App {
   }
 
   private def describeAllAnimals(animals: List[Animal]): Unit = animals.foreach(animal => {
-    animal.describe()
-    animal.sleep()
-    animal.poop()
-    animal.move()
+    println(animal.describe)
+    println(animal.sleep)
+    println(animal.poop)
+    println(animal.move)
     animal match {
       case bear: Bear =>
-        bear.giveBirth()
-        bear.hibernate()
-        bear.hunt()
+        println(bear.giveBirth)
+        println(bear.hibernate)
+        println(bear.hunt)
       case parrot: Parrot =>
-        parrot.fly()
-        parrot.layEggs()
-        parrot.talk()
+        println(parrot.fly)
+        println(parrot.layEggs)
+        println(parrot.talk)
       case mantis: Mantis =>
-        mantis.fly()
-        mantis.layEggs()
-        mantis.molt()
+        println(mantis.fly)
+        println(mantis.layEggs)
+        println(mantis.molt)
       case _ => println("Unknown animal")
     }
     println()
