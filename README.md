@@ -42,3 +42,10 @@
     - [x] MVP
     - [x] Extension
     - [x] Research
+
+### Tuesday
+
+- Tasks:
+    - [x] MVP
+    - [x] Extension
+    - [x] Research

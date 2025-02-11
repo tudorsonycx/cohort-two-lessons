@@ -1,4 +1,4 @@
-package week2.day2.codealong.Vehicles
+package week2.day2.codealong.vehicles
 
 object VehicleLogic extends App {
   val car1: Car = new Car("Toyota", "Camry", "diesel")
