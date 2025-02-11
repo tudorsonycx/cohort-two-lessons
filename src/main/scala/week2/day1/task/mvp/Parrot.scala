@@ -1,7 +1,7 @@
 package week2.day1.task.mvp
 
 class Parrot(val name: String, val age: Int, val dietType: DietType, val feathersColor: String, val wingSpan: Int)
-  extends Bird with Flyable {
+  extends Bird {
   val species: String = "Psittacius erithacus"
   val conservationStatus: String = "Least Concern"
   val avgLifespanRange: (Int, Int) = (40 * 365, 60 * 365)

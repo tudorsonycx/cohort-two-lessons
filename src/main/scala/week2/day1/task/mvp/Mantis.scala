@@ -1,7 +1,7 @@
 package week2.day1.task.mvp
 
 class Mantis(val name: String, val age: Int, val dietType: DietType, val numberOfLegs: Int, val wingSpan: Int)
-  extends Insect with Flyable {
+  extends Insect {
   val species: String = "Mantis religiosa"
   val conservationStatus: String = "Least Concern"
   val avgLifespanRange: (Int, Int) = (365 / 2, 365)
