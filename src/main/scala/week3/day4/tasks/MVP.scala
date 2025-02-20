@@ -109,13 +109,22 @@ object MVP extends App {
     }
   }
 
-  val inputPerson: InputPerson = InputPerson(
+  val inputPerson1: InputPerson = InputPerson(
     "John Doe",
     LocalDate.of(1990, 4, 1),
     Some("Software Engineer"),
     "England",
     Some(LocalDate.of(2025, 1, 1))
   )
-  println(Person.createPerson(inputPerson))
 
+  val inputPerson2: InputPerson = InputPerson(
+    "Jane Doe",
+    LocalDate.of(1995, 5, 1),
+    None,
+    "France",
+    None
+  )
+
+  println(Person.createPerson(inputPerson1))
+  println(Person.createPerson(inputPerson2))
 }
