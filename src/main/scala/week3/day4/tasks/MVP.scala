@@ -1,5 +1,7 @@
 package week3.day4.tasks
 
+import week3.day4.tasks.MVP.Person.ZodiacSign
+
 import java.time.LocalDate
 
 object MVP extends App {
@@ -55,9 +57,11 @@ object MVP extends App {
     lastCountryLivedIn: String,
     dateOfDeath: Option[LocalDate],
     age: Int,
-    starSign: String,
+    zodiacSign: ZodiacSign,
     ageAtDeath: Option[Int]
-  )
+  ) {
+    def horoscope: (ZodiacSign, String) = Person.horoscope(dateOfBirth)
+  }
 
   case class InputPerson(
     fullName: String,
@@ -68,28 +72,56 @@ object MVP extends App {
   )
 
   object Person {
+
+    sealed trait ZodiacSign
+
+    case object Aries extends ZodiacSign
+
+    case object Taurus extends ZodiacSign
+
+    case object Gemini extends ZodiacSign
+
+    case object Cancer extends ZodiacSign
+
+    case object Leo extends ZodiacSign
+
+    case object Virgo extends ZodiacSign
+
+    case object Libra extends ZodiacSign
+
+    case object Scorpio extends ZodiacSign
+
+    case object Sagittarius extends ZodiacSign
+
+    case object Capricorn extends ZodiacSign
+
+    case object Aquarius extends ZodiacSign
+
+    case object Pisces extends ZodiacSign
+
+    private def getZodiacSign(dateOfBirth: LocalDate): ZodiacSign = {
+      val month: Int = dateOfBirth.getMonthValue
+      val day: Int = dateOfBirth.getDayOfMonth
+
+      (month, day) match {
+        case (m, d) if (m == 3 && d > 20) || (m == 4 && d < 20) => Aries
+        case (m, d) if (m == 4 && d > 19) || (m == 5 && d < 21) => Taurus
+        case (m, d) if (m == 5 && d > 20) || (m == 6 && d < 22) => Gemini
+        case (m, d) if (m == 6 && d > 21) || (m == 7 && d < 23) => Cancer
+        case (m, d) if (m == 7 && d > 22) || (m == 8 && d < 23) => Leo
+        case (m, d) if (m == 8 && d > 22) || (m == 9 && d < 23) => Virgo
+        case (m, d) if (m == 9 && d > 22) || (m == 10 && d < 23) => Libra
+        case (m, d) if (m == 10 && d > 23) || (m == 11 && d < 22) => Scorpio
+        case (m, d) if (m == 11 && d > 21) || (m == 12 && d < 22) => Sagittarius
+        case (m, d) if (m == 12 && d > 21) || (m == 1 && d < 20) => Capricorn
+        case (m, d) if (m == 1 && d > 19) || (m == 2 && d < 19) => Aquarius
+        case (m, d) if (m == 2 && d > 18) || (m == 3 && d < 21) => Pisces
+      }
+    }
+
     def createPerson(inputPerson: InputPerson): Person = {
       val age: Int = inputPerson.dateOfBirth.until(LocalDate.now()).getYears
-
-      val month: Int = inputPerson.dateOfBirth.getMonthValue
-      val day: Int = inputPerson.dateOfBirth.getDayOfMonth
-      val starSign: String = {
-        (month, day) match {
-          case (m, d) if (m == 3 && d > 20) || (m == 4 && d < 20) => "Aries"
-          case (m, d) if (m == 4 && d > 19) || (m == 5 && d < 21) => "Taurus"
-          case (m, d) if (m == 5 && d > 20) || (m == 6 && d < 22) => "Gemini"
-          case (m, d) if (m == 6 && d > 21) || (m == 7 && d < 23) => "Cancer"
-          case (m, d) if (m == 7 && d > 22) || (m == 8 && d < 23) => "Leo"
-          case (m, d) if (m == 8 && d > 22) || (m == 9 && d < 23) => "Virgo"
-          case (m, d) if (m == 9 && d > 22) || (m == 10 && d < 23) => "Libra"
-          case (m, d) if (m == 10 && d > 23) || (m == 11 && d < 22) => "Scorpio"
-          case (m, d) if (m == 11 && d > 21) || (m == 12 && d < 22) => "Sagittarius"
-          case (m, d) if (m == 12 && d > 21) || (m == 1 && d < 20) => "Capricorn"
-          case (m, d) if (m == 1 && d > 19) || (m == 2 && d < 19) => "Aquarius"
-          case (m, d) if (m == 2 && d > 18) || (m == 3 && d < 21) => "Pisces"
-        }
-      }
-
+      val starSign: ZodiacSign = getZodiacSign(inputPerson.dateOfBirth)
       val ageAtDeath: Option[Int] =
         inputPerson.dateOfDeath match {
           case Some(value) => Some(inputPerson.dateOfBirth.until(value).getYears)
@@ -106,6 +138,24 @@ object MVP extends App {
         starSign,
         ageAtDeath
       )
+    }
+
+    def horoscope(dateOfBirth: LocalDate): (ZodiacSign, String) = {
+      val zodiacSign: ZodiacSign = getZodiacSign(dateOfBirth)
+      zodiacSign match {
+        case Aries => (Aries, "You are an Aries")
+        case Taurus => (Taurus, "You are a Taurus")
+        case Gemini => (Gemini, "You are a Gemini")
+        case Cancer => (Cancer, "You are a Cancer")
+        case Leo => (Leo, "You are a Leo")
+        case Virgo => (Virgo, "You are a Virgo")
+        case Libra => (Libra, "You are a Libra")
+        case Scorpio => (Scorpio, "You are a Scorpio")
+        case Sagittarius => (Sagittarius, "You are a Sagittarius")
+        case Capricorn => (Capricorn, "You are a Capricorn")
+        case Aquarius => (Aquarius, "You are an Aquarius")
+        case Pisces => (Pisces, "You are a Pisces")
+      }
     }
   }
 
@@ -125,6 +175,12 @@ object MVP extends App {
     None
   )
 
-  println(Person.createPerson(inputPerson1))
-  println(Person.createPerson(inputPerson2))
+  val person1: Person = Person.createPerson(inputPerson1)
+  val person2: Person = Person.createPerson(inputPerson2)
+
+  println(person1)
+  println(person2)
+
+  println(person1.horoscope)
+  println(person2.horoscope)
 }
