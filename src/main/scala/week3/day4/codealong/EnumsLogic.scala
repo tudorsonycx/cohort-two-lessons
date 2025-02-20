@@ -58,4 +58,15 @@ object EnumsLogic extends App {
   case object NotFound extends Error("Not found", 404)
 
   case object HairColourError extends Error("Not found", 404)
+
+  BetterWeekday.values.foreach(day => day match {
+    case BetterWeekday.Monday => println(s"Oh, it's ${BetterWeekday.Monday}")
+    case BetterWeekday.Tuesday => println(s"Oh, it's ${BetterWeekday.Tuesday}")
+    case BetterWeekday.Wednesday => println(s"Oh, it's ${BetterWeekday.Wednesday}")
+    case BetterWeekday.Thursday => println(s"Oh, it's ${BetterWeekday.Thursday}")
+    case BetterWeekday.Friday => println(s"Oh, it's ${BetterWeekday.Friday}")
+    case BetterWeekday.Saturday => println(s"Oh, it's ${BetterWeekday.Saturday}")
+    case BetterWeekday.Sunday => println(s"Oh, it's ${BetterWeekday.Sunday}")
+  })
 }
+
