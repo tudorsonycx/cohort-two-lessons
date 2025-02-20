@@ -2,7 +2,7 @@ package week3.day4.codealong
 
 object EnumsLogic extends App {
 
-  object Weekday extends Enumeration {
+  private object Weekday extends Enumeration {
     val Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday = Value
   }
 
@@ -10,27 +10,27 @@ object EnumsLogic extends App {
   println(Weekday.values)
   println(Weekday.Sunday)
 
-  object BetterWeekday extends Enumeration {
-    val Monday = Value("Mon")
-    val Tuesday = Value("Tue")
-    val Wednesday = Value("Wed")
-    val Thursday = Value("Thu")
-    val Friday = Value("Fri")
-    val Saturday = Value("Sat")
-    val Sunday = Value("Sun")
+  private object BetterWeekday extends Enumeration {
+    val Monday: Value = Value("Mon")
+    val Tuesday: Value = Value("Tue")
+    val Wednesday: Value = Value("Wed")
+    val Thursday: Value = Value("Thu")
+    val Friday: Value = Value("Fri")
+    val Saturday: Value = Value("Sat")
+    val Sunday: Value = Value("Sun")
   }
 
   println(BetterWeekday.values)
   println(BetterWeekday.Sunday)
 
-  object ReorderedWeekday extends Enumeration {
-    val Monday = Value(6)
-    val Tuesday = Value(1)
-    val Wednesday = Value(2)
-    val Thursday = Value(3)
-    val Friday = Value(4)
-    val Saturday = Value(5)
-    val Sunday = Value(0)
+  private object ReorderedWeekday extends Enumeration {
+    val Monday: Value = Value(6)
+    val Tuesday: Value = Value(1)
+    val Wednesday: Value = Value(2)
+    val Thursday: Value = Value(3)
+    val Friday: Value = Value(4)
+    val Saturday: Value = Value(5)
+    val Sunday: Value = Value(0)
   }
 
   println(ReorderedWeekday.values)
