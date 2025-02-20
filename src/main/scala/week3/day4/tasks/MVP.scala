@@ -121,7 +121,7 @@ object MVP extends App {
 
     def createPerson(inputPerson: InputPerson): Person = {
       val age: Int = inputPerson.dateOfBirth.until(LocalDate.now()).getYears
-      val starSign: ZodiacSign = getZodiacSign(inputPerson.dateOfBirth)
+      val zodiacSign: ZodiacSign = getZodiacSign(inputPerson.dateOfBirth)
       val ageAtDeath: Option[Int] =
         inputPerson.dateOfDeath match {
           case Some(value) => Some(inputPerson.dateOfBirth.until(value).getYears)
@@ -135,7 +135,7 @@ object MVP extends App {
         inputPerson.lastCountryLivedIn,
         inputPerson.dateOfDeath,
         age,
-        starSign,
+        zodiacSign,
         ageAtDeath
       )
     }
