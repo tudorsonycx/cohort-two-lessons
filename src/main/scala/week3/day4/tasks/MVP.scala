@@ -27,28 +27,78 @@ object MVP extends App {
   countries.foreach(country => println(s"Capital of $country is ${getCapital(country)}"))
   println()
 
-  sealed trait Animal
+  sealed trait Animal {
+    val speciesName: String
+  }
 
-  case object Dog extends Animal
+  case object Dog extends Animal {
+    val speciesName: String = "Canis lupus familiaris"
+  }
 
-  case object Cat extends Animal
+  case object Cat extends Animal {
+    val speciesName: String = "Felis catus"
+  }
 
-  case object Bird extends Animal
+  case object Raven extends Animal {
+    val speciesName: String = "Corvus corax"
+  }
 
-  case object Fish extends Animal
+  case object KillerWhale extends Animal {
+    val speciesName: String = "Orcinus orca"
+  }
+
+  case object AmurLeopard extends Animal {
+    val speciesName: String = "Panthera pardus orientalis"
+  }
+
+  case object JavanRhino extends Animal {
+    val speciesName: String = "Rhinoceros sondaicus"
+  }
+
+  case object Vaquita extends Animal {
+    val speciesName: String = "Phocoena sinus"
+  }
+
+  case object SumatranElephant extends Animal {
+    val speciesName: String = "Elephas maximus sumatranus"
+  }
+
+  case object CrossRiverGorilla extends Animal {
+    val speciesName: String = "Gorilla gorilla diehli"
+  }
 
   def getAnimalFact(animal: Animal): String = {
-    animal match {
+    val criticallyEndangered: List[String] = List(
+      AmurLeopard.speciesName,
+      JavanRhino.speciesName,
+      Vaquita.speciesName,
+      SumatranElephant.speciesName,
+      CrossRiverGorilla.speciesName
+    )
+    val fact: String = animal match {
       case Dog => "Dogs can smell about 1,000 times better than humans."
       case Cat => "Cats have five toes on their front paws, but only four on their back paws."
-      case Bird => "The smallest bird in the world is the bee hummingbird."
-      case Fish => "Fish can see in color."
+      case Raven => "Ravens are one of the smartest animals."
+      case KillerWhale => "Killer whales are actually dolphins."
+      case AmurLeopard => "Amur leopards are the rarest big cats in the world."
+      case JavanRhino => "Javan rhinos are the most threatened of the five rhino species."
+      case Vaquita => "Vaquitas are the most endangered marine mammal in the world."
+      case SumatranElephant => "Sumatran elephants are the smallest of the Asian elephants."
+      case CrossRiverGorilla => "Cross River gorillas are the most endangered of the four gorilla subspecies."
+    }
+    if (criticallyEndangered.contains(animal.speciesName)) {
+      s"$fact This species is critically endangered."
+    } else {
+      fact
     }
   }
 
-  val animals: List[Animal] = List(Dog, Cat, Bird, Fish)
+  val animals: List[Animal] =
+    List(Dog, Cat, Raven, KillerWhale, AmurLeopard, JavanRhino, Vaquita, SumatranElephant, CrossRiverGorilla)
 
   animals.foreach(animal => println(getAnimalFact(animal)))
+
+  println()
 
   case class Person private(
     fullName: String,
