@@ -1,10 +1,10 @@
 package week3.day4.tasks
 
-import week3.day4.tasks.MVP.Person.ZodiacSign
+import week3.day4.tasks.Tasks.Person.ZodiacSign
 
 import java.time.LocalDate
 
-object MVP extends App {
+object Tasks extends App {
   def getCapital(country: String): String = {
     country.trim.toLowerCase match {
       case "england" => "London"
