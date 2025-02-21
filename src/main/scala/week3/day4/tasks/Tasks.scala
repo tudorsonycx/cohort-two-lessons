@@ -190,6 +190,8 @@ object Tasks extends App {
       )
     }
 
+    def apply(inputPerson: InputPerson): Person = createPerson(inputPerson)
+
     def horoscope(dateOfBirth: LocalDate): (ZodiacSign, String) = {
       val zodiacSign: ZodiacSign = getZodiacSign(dateOfBirth)
       zodiacSign match {
@@ -225,8 +227,8 @@ object Tasks extends App {
     None
   )
 
-  val person1: Person = Person.createPerson(inputPerson1)
-  val person2: Person = Person.createPerson(inputPerson2)
+  val person1: Person = Person(inputPerson1)
+  val person2: Person = Person(inputPerson2)
 
   println(person1)
   println(person2)
