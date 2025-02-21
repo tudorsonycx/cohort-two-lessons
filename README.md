@@ -49,3 +49,12 @@
     - [x] MVP
     - [x] Extension
     - [x] Research
+
+## Week 3
+
+### Thursday
+
+- Tasks:
+    - [x] MVP
+    - [x] Extension
+    - [x] Research
