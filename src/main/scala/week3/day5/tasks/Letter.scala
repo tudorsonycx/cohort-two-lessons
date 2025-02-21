@@ -33,6 +33,14 @@ object Letter {
   def letterOrError(maybeName: String, maybePostCode: String): Either[GenericPostageError, Letter] = {
     val postcodeResult: Either[InvalidPostcodeError, Postcode] = Postcode.postcodeOrError(maybePostCode)
     val nameResult: Either[InvalidNameError, Name] = Name.nameOrError(maybeName)
+
+    /**
+     * This is equivalent to:
+     * for {
+     *   postcode <- postcodeResult
+     *   name <- nameResult
+     * } yield Letter(name, postcode)
+     */
     postcodeResult.flatMap(postcode =>
       nameResult.map(name =>
         Letter(name, postcode)
