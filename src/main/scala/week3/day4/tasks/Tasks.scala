@@ -1,7 +1,5 @@
 package week3.day4.tasks
 
-import week3.day4.tasks.Tasks.Person.ZodiacSign
-
 import java.time.LocalDate
 
 object Tasks extends App {
@@ -107,10 +105,10 @@ object Tasks extends App {
     lastCountryLivedIn: String,
     dateOfDeath: Option[LocalDate],
     age: Int,
-    zodiacSign: ZodiacSign,
+    zodiacSign: Person.ZodiacSign,
     ageAtDeath: Option[Int]
   ) {
-    def horoscope: (ZodiacSign, String) = Person.horoscope(dateOfBirth)
+    def horoscope: (Person.ZodiacSign, String) = Person.horoscope(dateOfBirth)
   }
 
   case class InputPerson(
