@@ -31,13 +31,13 @@ trait GenericPostageError {
 
 object Letter {
   def letterOrError(maybeName: String, maybePostCode: String): Either[GenericPostageError, Letter] = {
-    val postcode: Either[InvalidPostcodeError, Postcode] = Postcode.postcodeOrError(maybePostCode)
-    val name: Either[InvalidNameError, Name] = Name.nameOrError(maybeName)
-    postcode.flatMap(postcode => {
-      name.map(name => {
+    val postcodeResult: Either[InvalidPostcodeError, Postcode] = Postcode.postcodeOrError(maybePostCode)
+    val nameResult: Either[InvalidNameError, Name] = Name.nameOrError(maybeName)
+    postcodeResult.flatMap(postcode =>
+      nameResult.map(name =>
         Letter(name, postcode)
-      })
-    })
+      )
+    )
   }
 }
 
