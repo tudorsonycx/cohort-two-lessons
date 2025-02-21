@@ -1,4 +1,4 @@
-package week3.day5.Tasks
+package week3.day5.tasks
 
 import java.lang.classfile.ClassFile.Option
 

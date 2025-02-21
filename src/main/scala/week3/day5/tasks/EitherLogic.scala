@@ -1,4 +1,4 @@
-package week3.day5.Tasks
+package week3.day5.tasks
 
 object EitherLogic extends App {
   val letter: Right[Nothing, Letter] = Right(Letter(Name("A letter"), Postcode("xj1 1j5")))
