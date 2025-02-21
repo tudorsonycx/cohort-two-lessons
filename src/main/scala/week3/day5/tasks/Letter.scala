@@ -1,13 +1,11 @@
 package week3.day5.tasks
 
-import java.lang.classfile.ClassFile.Option
-
 case class Name(value: String)
 
 object Name {
   def nameOrError(maybeName: String): Either[InvalidNameError, Name] = {
     maybeName match {
-      case s if s.exists(_.isDigit) => Left(InvalidNameError("Name contains digit"))
+      case s if s.exists(_.isDigit) => Left(InvalidNameError("Name contains digits"))
       case s => Right(Name(s))
     }
   }
@@ -18,7 +16,8 @@ case class Postcode(value: String)
 object Postcode {
   def postcodeOrError(maybePostCode: String): Either[InvalidPostcodeError, Postcode] = {
     maybePostCode match {
-      case s if s.trim != s || s.count(_ == ' ') != 1 => Left(InvalidPostcodeError("Invalid postcode"))
+      case s if s.startsWith(" ") || s.endsWith(" ") || s.count(_ == ' ') != 1 =>
+        Left(InvalidPostcodeError("Invalid postcode"))
       case s => Right(Postcode(s))
     }
   }
