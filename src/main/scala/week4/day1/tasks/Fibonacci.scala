@@ -2,9 +2,10 @@ package week4.day1.tasks
 
 import scala.annotation.tailrec
 
-case class FibonacciError() extends Exception("Input should be greater than 0")
 
 object Fibonacci {
+  case class FibonacciError() extends Exception("Input should be greater than 0")
+
   @tailrec
   def getFibonacci(n: Int, first: Int = 0, second: Int = 1): Either[FibonacciError, Int] = {
     n match {
