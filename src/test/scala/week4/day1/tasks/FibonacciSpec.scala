@@ -2,6 +2,7 @@ package week4.day1.tasks
 
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
+import week4.day1.tasks.Fibonacci.FibonacciError
 
 class FibonacciSpec extends AnyWordSpec with Matchers {
   "Fibonacci.getFibonacci" should {
