@@ -17,21 +17,18 @@ object Series {
 
   def isEven(list: List[Int], idx: Int): Either[SeriesError, Boolean] = {
     @tailrec
-    def isEvenHelper(hList: List[Int], currIdx: Int = 0): Either[SeriesError, Boolean] = {
-      hList match {
-        case Nil => Left(SeriesError("Index is out of bounds"))
-        case head :: tail =>
-          currIdx match {
-            case `idx` => Right(head % 2 == 0)
-            case _ => isEvenHelper(tail, currIdx + 1)
-          }
+    def isEvenHelper(currIdx: Int = 0): Either[SeriesError, Boolean] = {
+      currIdx match {
+        case i if i >= list.length => Left(SeriesError("Index is out of bounds"))
+        case `idx` => Right(list(currIdx) % 2 == 0)
+        case _ => isEvenHelper(currIdx + 1)
       }
     }
 
     list match {
       case Nil => Left(SeriesError("List is empty"))
       case l =>
-        isEvenHelper(l)
+        isEvenHelper()
     }
   }
 }
