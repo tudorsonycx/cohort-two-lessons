@@ -1,4 +1,4 @@
-package week4.codealong
+package week4.day1.codealong
 
 import scala.annotation.tailrec
 
