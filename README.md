@@ -2,66 +2,24 @@
 
 ## Week 1
 
-### Monday
-
-- [x] Hello World
-
-### Tuesday
-
-- Tasks:
-    - [x] MVP
-    - [x] Extension
-    - [x] Research
-
-### Wednesday
-
-- Tasks:
-    - [x] MVP
-    - [x] Extension
-    - [x] Research
-
-### Thursday
-
-- Tasks:
-    - [x] MVP
-    - [x] Extension
-    - [x] Research
-
-### Friday
-
-- Tasks:
-    - [x] MVP
-    - [x] Extension
-    - [x] Research
+| Day      | Tasks               |
+|----------|---------------------|
+| Monday   | Hello World,        |
+| Tuesday  | MVP, Extension, Research |
+| Wednesday| MVP, Extension, Research |
+| Thursday | MVP, Extension, Research |
+| Friday   | MVP, Extension, Research |
 
 ## Week 2
 
-### Monday
-
-- Tasks:
-    - [x] MVP
-    - [x] Extension
-    - [x] Research
-
-### Tuesday
-
-- Tasks:
-    - [x] MVP
-    - [x] Extension
-    - [x] Research
+| Day      | Tasks       |
+|----------|-------------|
+| Monday   | MVP, Extension, Research |
+| Tuesday  | MVP, Extension, Research |
 
 ## Week 3
 
-### Thursday
-
-- Tasks:
-    - [x] MVP
-    - [x] Extension
-    - [x] Research
-
-### Friday
-
-- Tasks:
-    - [x] MVP
-    - [x] Extension
-    - [x] Research
+| Day      | Tasks       |
+|----------|-------------|
+| Thursday | MVP, Extension, Research |
+| Friday   | MVP, Extension, Research |
