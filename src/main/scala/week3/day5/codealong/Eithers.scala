@@ -17,7 +17,7 @@ object Eithers extends App {
 
   class NewError(val code: Int, val message: String) extends Exception(message)
 
-  case object IsOddError extends NewError(400, "Input isn't even")
+  case object IsOddError extends NewError(400, "Input isn't odd")
 
   def isOddV2(x: Int): Either[NewError, String] = {
     if (x % 2 != 0) {
