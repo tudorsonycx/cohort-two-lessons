@@ -108,7 +108,7 @@ object MVP extends App {
   println(applyFunc(5, square))
 
   def uglyPower(exponent: Int): Int => Int = {
-    def toExponent(base: Int): Int = {
+    (base: Int) => {
       @tailrec
       def toExponentHelper(hExponent: Int, acc: Int = 1): Int = {
         hExponent match {
@@ -119,8 +119,6 @@ object MVP extends App {
 
       toExponentHelper(exponent)
     }
-
-    toExponent
   }
 
   println(uglyPower(3)(3))
@@ -133,9 +131,7 @@ object MVP extends App {
   println(uglySquare(10))
 
   def power(exponent: Int): Int => Int = {
-    def toExponent(base: Int): Int = Math.pow(base, exponent).toInt
-
-    toExponent
+    (base: Int) => Math.pow(base, exponent).toInt
   }
 
   def normalSquare(num: Int): Int = power(2)(num)
