@@ -8,6 +8,7 @@ import scala.util.Random
 
 object PizzaOrder extends App {
   val randomNumGen: Random = new Random()
+
   val f1: Future[String] = Future({
     val randSleepTime = randomNumGen.nextInt(3001)
     println(s"f1 sleeping $randSleepTime milliseconds")
@@ -27,7 +28,10 @@ object PizzaOrder extends App {
     }
   })
 
-  val combined: Future[String] = f1.flatMap(s1 => f2.map(s2 => s"$s1, $s2"))
+  val combined: Future[String] = for {
+    s1 <- f1
+    s2 <- f2
+  } yield s"$s1 $s2"
 
   val combinedResult: String = Await.result(combined, Duration(3, TimeUnit.SECONDS))
 
