@@ -26,7 +26,8 @@
 
 ## Week 4
 
-| Day     | Tasks                    |
-|---------|--------------------------|
-| Monday  | MVP, Extension, Research |
-| Tuesday | MVP, Extension, Research |
+| Day       | Tasks                    |
+|-----------|--------------------------|
+| Monday    | MVP, Extension, Research |
+| Tuesday   | MVP, Extension, Research |
+| Wednesday | MVP, Extension, Research |
